@@ -1,0 +1,21 @@
+{
+  "name": "docker-ui",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Nicholas Whyte <nick@nickwhyte.com>"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  }
+}

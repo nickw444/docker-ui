@@ -1,0 +1,22 @@
+sudo: required
+language: node_js
+node_is:
+    - "5.5"
+
+services:
+    - docker
+
+install:
+    - npm install .
+    - npm run vendor    
+
+script:
+    - npm run build
+    - docker build -t docker-ui:$(./version)
+    - docker tag docker-ui:$(./version) nickw444/docker-ui:$(./version)
+    - docker tag docker-ui:$(./version) nickw444/docker-ui:latest
+    - docker push nickw444/docker-ui
+
+branches:
+    only:
+        - master
