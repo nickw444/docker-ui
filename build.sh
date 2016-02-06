@@ -1,5 +1,4 @@
 #!/bin/sh
-npm run build
 REMOTE_ARTIFACT="nickw444/docker-ui"
 PACKAGE_VERSION=$(cat package.json | jq -r '.version')
 docker build -t "$REMOTE_ARTIFACT:$PACKAGE_VERSION" .
