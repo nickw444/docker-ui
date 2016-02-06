@@ -1,5 +1,5 @@
-FROM nginx:latest
+FROM dspfac/alpine-nginx:latest
 MAINTAINER Nick Whyte (nick@nickwhyte.com)
 
-WORKDIR /usr/share/nginx/html
+WORKDIR /usr/html
 ADD ["./dist", "package.json", "./"]
